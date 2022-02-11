@@ -1,24 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import { Route, Routes } from "react-router";
+import { Header, Footer, MobileNavigation } from "components";
+import routes from "routes";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <div className="pb-16 md:pb-0 min-h-screen">
+        <Routes>
+          {routes.map(({ path, component: Component }) => (
+            <Route key={path} element={<Component />} path={path} />
+          ))}
+        </Routes>
+      </div>
+
+      <Footer />
+      <MobileNavigation />
     </div>
   );
 }
