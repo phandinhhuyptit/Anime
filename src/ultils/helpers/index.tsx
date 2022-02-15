@@ -38,4 +38,18 @@ const compareTwoObject = <T, U extends keyof T>(obj1: T, obj2: T): boolean => {
   return isComparedCount === entries.length;
 };
 
-export { lazyLoading, isObjectEmpty, compareTwoObject };
+const numberWithCommas = (x: string | number | undefined) => {
+  if (!x && x !== 0) return "";
+
+  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+};
+
+const chunk = <T extends {}>(arr: Array<T>, chunkSize: number) => {
+  let R = [];
+
+  for (var i = 0; i < arr.length; i += chunkSize) R.push(arr.slice(i, i + chunkSize));
+  console.log("R", R);
+  return R;
+};
+
+export { lazyLoading, isObjectEmpty, compareTwoObject, numberWithCommas, chunk };

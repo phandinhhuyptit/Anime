@@ -9,7 +9,7 @@ import { GENRES } from "ultils/constants"
 
 const HomeScreen = lazyLoading(() => import("pages/Home"));
 const BrowseScreen = lazyLoading(() => import("pages/Browse"));
-
+const Detail = lazyLoading(() => import("pages/Detail"));
 const routes: Route[] = [
     {
         name: "Trang chủ",
@@ -31,6 +31,12 @@ const routes: Route[] = [
         dropdownData: GENRES,
         dropdownPath: (data: Genre) => `/genres/${data.slug}`,
         listKey: (data: Genre) => data.slug,
+    },
+    {
+        name: "Thông tin phim",
+        path: "/info/:slug",
+        component: Detail,
+        header: false,
     },
 ]
 
