@@ -1,6 +1,6 @@
 import React from "react";
 import { Anime } from "types";
-import Storage from "ultils/Storage";
+import Storage from "utils/Storage";
 import SlideCarousel from "components/SlideCarousel";
 import Section from "./Section";
 

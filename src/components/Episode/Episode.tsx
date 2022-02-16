@@ -1,6 +1,6 @@
 import React from "react";
 import { Episode as EpisodeType } from "types";
-import { numberWithCommas } from "ultils/helpers";
+import { numberWithCommas } from "utils/helpers";
 import Image from "components/Image";
 
 interface EpisodeProps extends EpisodeType {

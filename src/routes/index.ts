@@ -1,15 +1,17 @@
 import { AiOutlineHome, AiOutlineSearch } from "react-icons/ai";
 import { BiCoinStack } from "react-icons/bi";
 import { RiNumbersLine } from "react-icons/ri";
-import { lazyLoading } from "ultils/helpers";
+import { lazyLoading } from "utils/helpers";
 import { Route } from "models";
 import { Genre, Ranking } from "types";
-import { GENRES } from "ultils/constants"
+import { GENRES } from "utils/constants"
 
 
 const HomeScreen = lazyLoading(() => import("pages/Home"));
 const BrowseScreen = lazyLoading(() => import("pages/Browse"));
-const Detail = lazyLoading(() => import("pages/Detail"));
+const DetailScreen = lazyLoading(() => import("pages/Detail"));
+const WatchScreen = lazyLoading(() => import("pages/Watch"));
+
 const routes: Route[] = [
     {
         name: "Trang chủ",
@@ -35,7 +37,13 @@ const routes: Route[] = [
     {
         name: "Thông tin phim",
         path: "/info/:slug",
-        component: Detail,
+        component: DetailScreen,
+        header: false,
+    },
+    {
+        name: "Xem phim",
+        path: "/watch/:slug",
+        component: WatchScreen,
         header: false,
     },
 ]

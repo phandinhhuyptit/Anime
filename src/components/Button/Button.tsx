@@ -38,7 +38,7 @@ const ButtonRaw = (props: ButtonRawProps) => {
 
 const Button = (props: ButtonProps) => {
   const { onClick, to, ...buttonProps } = props;
-  console.log("To", to);
+
   return to ? (
     <Link to={to}>
       <ButtonRaw {...buttonProps} />

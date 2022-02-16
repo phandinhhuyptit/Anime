@@ -13,7 +13,7 @@ type ImportFunc = () => Promise<{
 
 const lazyLoading = (importFunc: ImportFunc) => {
   const LazyComponent = lazy(importFunc);
-  console.log("typeof LazyComponent", typeof LazyComponent);
+
   return (props: React.ComponentProps<typeof LazyComponent>) => (
     <Suspense fallback={<ProgressBar />}>
       <LazyComponent {...props} />
@@ -48,7 +48,7 @@ const chunk = <T extends {}>(arr: Array<T>, chunkSize: number) => {
   let R = [];
 
   for (var i = 0; i < arr.length; i += chunkSize) R.push(arr.slice(i, i + chunkSize));
-  console.log("R", R);
+
   return R;
 };
 

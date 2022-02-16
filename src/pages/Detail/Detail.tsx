@@ -4,8 +4,8 @@ import { BsPlayFill } from "react-icons/bs";
 import { useNavigate, useParams } from "react-router";
 import { Image, EpisodeChunk, Button, Skeleton } from "components";
 import { Anime, Episode as EpisodeType } from "types";
-import { chunk, numberWithCommas } from "ultils/helpers";
-import Storage from "ultils/Storage";
+import { chunk, numberWithCommas } from "utils/helpers";
+import Storage from "utils/Storage";
 import { useFetchInfo } from "hooks";
 
 const Detail = () => {
@@ -27,7 +27,7 @@ const Detail = () => {
   const handleClick = (index = 0) => {
     return () => navigate(`/watch/${slug}?episode_index=${index}`);
   };
-  console.log("info", info);
+
   return (
     <div className="py-16">
       <div className="w-full">

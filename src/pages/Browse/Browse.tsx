@@ -2,7 +2,7 @@ import React from "react";
 import useInfiniteScroll from "react-infinite-scroll-hook";
 import { useLocation, Location } from "react-router";
 import { AnimeCard, Loader, Skeleton } from "components";
-import { GENRES, RANKINGS } from "ultils/constants";
+import { GENRES, RANKINGS } from "utils/constants";
 import AnimeCardSkeleton from "skeletons/AnimeCardSkeleton";
 import { useBrowseList } from "hooks";
 

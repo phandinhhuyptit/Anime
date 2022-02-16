@@ -1,4 +1,4 @@
-import { compareTwoObject, isObjectEmpty } from "ultils/helpers"
+import { compareTwoObject, isObjectEmpty } from "utils/helpers"
 class Storage {
     static clear() {
         localStorage.clear()

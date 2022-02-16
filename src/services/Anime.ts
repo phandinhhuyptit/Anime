@@ -1,6 +1,6 @@
 import { GetListResponse, GetListData, SearchProps } from "models/Anime";
 import { AnimeInfo, Source, Anime } from "types"
-import axios from "ultils/axios"
+import axios from "utils/axios"
 import { IAPI } from "./Types/IAnimeApi"
 
 

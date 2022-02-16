@@ -12,3 +12,4 @@ export { default as Button } from "./Button";
 export { default as Episode } from "./Episode";
 export { default as EpisodeChunk } from "./EpisodeChunk";
 export { default as Disclosure } from "./Disclosure";
+export { default as Video } from "./Video";

@@ -3,3 +3,8 @@ export { default as useFetchSlide } from "./useFetchSlide";
 export { default as useFetchList } from "./useFetchList";
 export { default as useBrowseList } from "./useBrowseList";
 export { default as useFetchInfo } from "./useFetchInfo";
+export { default as useDevice } from "./useDevice";
+export { default as useQueryParams } from "./useQueryParams";
+export { default as useOrientation } from "./useOrientiation";
+export { default as useSearch } from "./useSearch";
+export { default as useFetchSource } from "./useFetchSource";

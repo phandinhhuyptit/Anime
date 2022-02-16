@@ -2,7 +2,7 @@ import React from "react";
 import { AiFillFacebook, AiFillGithub } from "react-icons/ai";
 import { FaDiscord } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import { DISCORD_NAME, FACEBOOK_URL, GITHUB_URL } from "ultils/constants";
+import { DISCORD_NAME, FACEBOOK_URL, GITHUB_URL } from "utils/constants";
 
 const Footer = () => {
   return (
